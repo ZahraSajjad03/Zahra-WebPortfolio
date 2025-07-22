@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Theme Modes */
+body.light-mode {
+    background: linear-gradient(to right, #f0f0f5, #eaeaf5);
+    color: #111;
+}
+
+body.dark-mode {
+    background: linear-gradient(to right, #161625, #232353);
+    color: white;
+}
+
+
+/* Professional Logo Image */
+.zs-image-logo {
+    height: 42px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+    box-shadow: none;
+}
+
+.zs-image-logo:hover {
+    transform: scale(1.04);
+}
+
+/* Dark Mode Adjustment */
+body.dark-mode .zs-image-logo {
+    filter: brightness(0) invert(1);
+    /* Makes dark logo light */
+}
+
+.zs-navbar {
+    background-color: #0a0a23;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+    padding: 10px 30px;
+}
+
+.zs-nav-link {
+    margin-right: 20px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.zs-nav-link:hover {
+    color: #3aa91e;
+    text-shadow: 0 0 5px #3aa91e;
+}
+
+/* Brand */
+.zs-brand img {
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 2px;
+}
+
+/* Intro Section */
+.zs-intro-container {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.zs-intro-text {
+    text-align: center;
+    padding: 20px;
+}
+
+.zs-heading {
+    font-size: 28px;
+    color: #74ed48;
+}
+
+.zs-title {
+    font-size: 60px;
+    font-weight: 800;
+}
+
+.zs-subtitle {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.zs-quote {
+    font-style: italic;
+    font-size: 18px;
+    margin-top: 10px;
+    color: #3aa91e;
+}
+
+/* Image */
+.zs-hero-image {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    margin-top: 30px;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.zs-hero-image:hover {
+    transform: scale(1.1);
+}
+
+@media (min-width: 992px) {
+    .zs-profile-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .zs-hero-image {
+        width: 380px;
+        margin-top: 0;
+    }
+}
+
+
+/* About & Interests */
+.zs-about-section,
+.zs-interest-section {
+    margin: 40px 80px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+}
+
+.dark-mode .zs-about-section,
+.dark-mode .zs-interest-section {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.light-mode .zs-about-section,
+.light-mode .zs-interest-section {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.zs-section-title {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #3aa91e;
+    font-weight: 700;
+}
+
+.zs-about-text,
+.zs-interest-article p {
+    font-size: 18px;
+    line-height: 1.8;
+    padding: 0 20px;
+}
+
+.zs-interest-article h3 {
+    color: #74ed48;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Project Page Styles */
+.zs-project-container {
+    padding: 60px 40px;
+}
+
+.zs-project-title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    color: #3aa91e;
+    margin-bottom: 40px;
+}
+
+.zs-project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid transparent;
+    padding: 25px;
+    border-radius: 12px;
+    height: 100%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.dark-mode .zs-project-card {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.zs-project-card:hover {
+    border-color: #3aa91e;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(255, 145, 0, 0.2);
+}
+
+.zs-project-card h3 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #74ed48;
+}
+
+.zs-project-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+
+/* Project Page Enhancements */
+.zs-project-container {
+    padding: 60px 40px;
+}
+
+.zs-project-title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    color: #3aa91e;
+    margin-bottom: 10px;
+}
+
+.zs-project-subtext {
+    font-size: 18px;
+    color: #ccc;
+    margin-top: -10px;
+}
+
+.zs-project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid transparent;
+    padding: 25px;
+    border-radius: 12px;
+    height: 100%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.dark-mode .zs-project-card {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.zs-project-card:hover {
+    border-color: #3aa91e;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(255, 145, 0, 0.2);
+}
+
+.zs-project-card h3 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #74ed48;
+}
+
+.zs-project-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+
+/* Scroll Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Modal Styling */
+.zs-project-modal .modal-content {
+    background-color: #1e1e2f;
+    color: white;
+    border: 2px solid #3aa91e;
+    border-radius: 10px;
+}
+
+
+.zs-project-modal .modal-header {
+    border-bottom: 1px solid #3aa91e;
+}
+
+.zs-project-modal .modal-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+body.light-mode {
+    background: linear-gradient(to right, #fefefe, #f3f3f8);
+    color: #222;
+}
+
+.light-mode .zs-navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .zs-nav-link {
+    color: #333;
+}
+
+.light-mode .zs-nav-link:hover {
+    color: #3aa91e;
+    text-shadow: 0 0 4px #3aa91e;
+}
+
+.light-mode .zs-brand img {
+    background-color: #ffffff;
+}
+
+.light-mode .zs-project-subtext {
+    color: #444;
+}
+
+.light-mode .zs-project-card {
+    background-color: #f9f9f9;
+    border-color: #eee;
+}
+
+.light-mode .zs-project-card:hover {
+    border-color: #3aa91e;
+    box-shadow: 0 6px 20px rgba(255, 145, 0, 0.2);
+}
+
+.light-mode .zs-project-card p {
+    color: #333;
+}
+
+.light-mode .zs-project-modal .modal-content {
+    background-color: #ffffff;
+    color: #222;
+    border: 2px solid #3aa91e;
+}
+
+.form-check-input:checked {
+    background-color: #3aa91e;
+    border-color: #3aa91e;
+}
+
+.form-check-input {
+    cursor: pointer;
+}
+
+.form-check-label {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+
+.zs-cv-container {
+    padding: 60px 20px;
+}
+
+.zs-cv-desc {
+    font-size: 18px;
+    color: #ccc;
+}
+
+.light-mode .zs-cv-desc {
+    color: #333;
+}
+
+.zs-cv-wrapper {
+    margin: 30px auto;
+    max-width: 900px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.zs-cv-pdf {
+    width: 100%;
+    height: 900px;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .zs-cv-pdf {
+        height: 600px;
+    }
+}
+
+
+@media print {
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    .navbar,
+    .zs-nav-link,
+    .form-check,
+    .btn,
+    .zs-cv-desc,
+    .zs-section-title {
+        display: none !important;
+    }
+
+    .zs-cv-wrapper {
+        box-shadow: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .zs-cv-pdf {
+        width: 100vw !important;
+        height: 100vh !important;
+        border: none !important;
+    }
+}
+
+.zs-cv-fullscreen {
+    position: absolute;
+    top: 80px;
+    /* height of navbar */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: calc(100vh - 80px);
+    width: 100vw;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.zs-cv-embed {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+
+.zs-contact-container {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.zs-contact-desc {
+    font-size: 18px;
+    color: #ccc;
+}
+
+.light-mode .zs-contact-desc {
+    color: #333;
+}
+
+.zs-contact-form input,
+.zs-contact-form textarea {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 6px;
+}
+
+.dark-mode .zs-contact-form input,
+.dark-mode .zs-contact-form textarea {
+    background-color: #1f1f2e;
+    color: #fff;
+    border: 1px solid #444;
+}

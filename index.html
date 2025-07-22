@@ -1,0 +1,87 @@
+<head>
+    <title>Portfolio | Zahra Sajjad</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="zs-body light-mode">
+
+    <nav class="navbar navbar-expand-md zs-navbar">
+        <div class="container-fluid justify-content-between">
+            <a class="navbar-brand" href="index.html">
+            </a>
+
+            <div class="d-flex">
+                <a class="zs-nav-link" href="index.html">Home</a>
+                <a class="zs-nav-link" href="ProjectPage.html">Projects</a>
+                <a class="zs-nav-link" href="CVPage.html">CV</a>
+                <a class="zs-nav-link" href="ContactPage.html">Contact</a>
+                <div class="form-check form-switch ms-3">
+                    <input class="form-check-input" type="checkbox" id="modeToggle">
+                    <label class="form-check-label text-white" for="modeToggle">Dark Mode</label>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container zs-intro-container">
+        <div class="row">
+            <div class="col-md zs-intro-text">
+                <h1 class="zs-title">Zahra Sajjad</h1>
+                <h3 class="zs-subtitle">Computer Science Student</h3>
+            </div>
+            <div class="col-md zs-profile-img text-center">
+                <img class="zs-hero-image" src="image.jpeg" alt="Zahra Sajjad">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="zs-about-section">
+        <h1 class="zs-section-title">About Me</h1>
+        <p class="zs-about-text">
+            I'm Zahra Sajjad, a final year computer science student passionate about the tech world!
+        </p>
+    </div>
+
+    <div class="zs-interest-section">
+        <h1 class="zs-section-title">Interests</h1>
+
+        <div class="zs-interest-article">
+            <h3>Swimming</h3>
+            <p>I like swimming and actively participate in competitions.</p>
+        </div>
+
+        <div class="zs-interest-article">
+            <h3>Embroidery</h3>
+            <p>When I need to get my mind off things, embroidery becomes my safe space.</p>
+        </div>
+    </div>
+
+
+    <script>
+        const toggleSwitch = document.getElementById('modeToggle');
+        const label = document.querySelector('label[for="modeToggle"]');
+        const body = document.body;
+
+        toggleSwitch.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            body.classList.toggle('light-mode');
+            label.textContent = body.classList.contains('dark-mode') ? 'Dark Mode' : 'Light Mode';
+        });
+
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add("appear");
+                observer.unobserve(entry.target);
+            });
+        }, { threshold: 0.1 });
+        faders.forEach(fader => appearOnScroll.observe(fader));
+    </script>
+
+</body>
+
+</html>
